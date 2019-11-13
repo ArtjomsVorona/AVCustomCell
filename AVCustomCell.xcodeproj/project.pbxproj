@@ -13,6 +13,9 @@
 		ACF0CC84237CA0DC006A644F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF0CC82237CA0DC006A644F /* Main.storyboard */; };
 		ACF0CC86237CA0E3006A644F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF0CC85237CA0E3006A644F /* Assets.xcassets */; };
 		ACF0CC89237CA0E3006A644F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF0CC87237CA0E3006A644F /* LaunchScreen.storyboard */; };
+		ACF0CC95237CA152006A644F /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF0CC94237CA152006A644F /* Car.swift */; };
+		ACF0CC98237CA205006A644F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF0CC97237CA205006A644F /* DataManager.swift */; };
+		ACF0CC9A237CA671006A644F /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF0CC99237CA671006A644F /* CarTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		ACF0CC85237CA0E3006A644F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACF0CC88237CA0E3006A644F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACF0CC8A237CA0E3006A644F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACF0CC94237CA152006A644F /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		ACF0CC97237CA205006A644F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		ACF0CC99237CA671006A644F /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		ACF0CC7B237CA0DC006A644F /* AVCustomCell */ = {
 			isa = PBXGroup;
 			children = (
-				ACF0CC7C237CA0DC006A644F /* AppDelegate.swift */,
-				ACF0CC7E237CA0DC006A644F /* SceneDelegate.swift */,
-				ACF0CC80237CA0DC006A644F /* ViewController.swift */,
-				ACF0CC82237CA0DC006A644F /* Main.storyboard */,
+				ACF0CC96237CA1A3006A644F /* Data */,
+				ACF0CC93237CA136006A644F /* Model */,
+				ACF0CC90237CA105006A644F /* Delegates */,
+				ACF0CC92237CA12C006A644F /* Views */,
+				ACF0CC91237CA113006A644F /* Controllers */,
 				ACF0CC85237CA0E3006A644F /* Assets.xcassets */,
-				ACF0CC87237CA0E3006A644F /* LaunchScreen.storyboard */,
 				ACF0CC8A237CA0E3006A644F /* Info.plist */,
 			);
 			path = AVCustomCell;
+			sourceTree = "<group>";
+		};
+		ACF0CC90237CA105006A644F /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				ACF0CC7C237CA0DC006A644F /* AppDelegate.swift */,
+				ACF0CC7E237CA0DC006A644F /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		ACF0CC91237CA113006A644F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACF0CC80237CA0DC006A644F /* ViewController.swift */,
+				ACF0CC99237CA671006A644F /* CarTableViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ACF0CC92237CA12C006A644F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ACF0CC82237CA0DC006A644F /* Main.storyboard */,
+				ACF0CC87237CA0E3006A644F /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ACF0CC93237CA136006A644F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACF0CC94237CA152006A644F /* Car.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ACF0CC96237CA1A3006A644F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				ACF0CC97237CA205006A644F /* DataManager.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +188,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACF0CC81237CA0DC006A644F /* ViewController.swift in Sources */,
+				ACF0CC98237CA205006A644F /* DataManager.swift in Sources */,
+				ACF0CC9A237CA671006A644F /* CarTableViewCell.swift in Sources */,
 				ACF0CC7D237CA0DC006A644F /* AppDelegate.swift in Sources */,
+				ACF0CC95237CA152006A644F /* Car.swift in Sources */,
 				ACF0CC7F237CA0DC006A644F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +346,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-.AVCustomCell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-.AVCustomCell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
